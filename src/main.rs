@@ -3,7 +3,6 @@
 #![feature(llvm_asm)]
 #![feature(global_asm)]
 
-mod base;
 mod console;
 
 mod lang_items;

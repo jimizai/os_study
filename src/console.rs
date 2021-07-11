@@ -1,9 +1,9 @@
-use crate::base::syscall;
+use crate::sbi::sbi_call;
 use core::fmt::{self, Write};
 
 const SBI_CONSOLE_PUTCHAR: usize = 1;
 pub fn console_putchar(c: usize) {
-    syscall(SBI_CONSOLE_PUTCHAR, [c, 0, 0]);
+    sbi_call(SBI_CONSOLE_PUTCHAR, c, 0, 0);
 }
 struct Stdout;
 
