@@ -27,6 +27,10 @@ fn clear_bss() {
 
 #[no_mangle]
 extern "C" fn rust_main() {
-    println!("hello wolrd");
+    warn!("hello wolrd");
+    debug!("hello wolrd");
+    info!("hello wolrd");
+    trace!("hello wolrd");
+    error!("hello wolrd");
     shutdown()
 }
