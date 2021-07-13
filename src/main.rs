@@ -3,10 +3,12 @@
 #![feature(llvm_asm)]
 #![feature(global_asm)]
 
+#[macro_use]
 mod console;
-
+mod batch;
 mod lang_items;
 mod sbi;
+mod trap;
 use sbi::sbi_call;
 
 global_asm!(include_str!("entry.asm"));
